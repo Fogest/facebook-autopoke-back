@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+
+  "name": "Facebook Autopoke-back",
+  "version": "0.0.1",
+  "description": "Automatically poke users back who poke you. ",
+
+  "permissions": [
+    "https://www.facebook.com/pokes*",
+    "http://www.facebook.com/pokes*"
+  ],
+
+  "web_accessible_resources": ["jquery-2.0.3.min.map"],
+
+  "content_scripts": [
+    {
+        "matches": ["http://www.facebook.com/pokes*","https://www.facebook.com/pokes*"],
+        "js": ["jquery-2.0.3.min.js", "main.js"],
+		"css": ["style.css"],
+        "run_at": "document_end",
+        "all_frames": true
+    }
+  ]
+}
