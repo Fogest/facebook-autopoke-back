@@ -5,10 +5,10 @@
 
 //Main pokeback function.
 var pokeBack = function(){
-	if($('#content a:contains("Poke back")').length > 0) {
+	if($('#content a:contains("Poke Back")').length > 0) {
 		console.log('Poke found! Attempting to poke back...');
-		$('#content a:contains("Poke back")')[0].click();
+		$('#content a:contains("Poke Back")')[0].click();
 	}
 }
-//Sets pokeback check to happen every 7.5 seconds.
-setInterval(pokeBack,7500);
+//Sets pokeback check to happen every 5 seconds.
+setInterval(pokeBack,5000);
